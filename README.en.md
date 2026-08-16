@@ -73,9 +73,11 @@ immediately, no restart needed.
 
 This Skill only carries **executable process** (what to do, how to decide). All
 **machine-specific facts** (compile repo path, test server address, SSH keys, each
-plugin's repo and install state) should live in your own memory/archive area,
-referenced by the Skill — facts change only in the archive, the Skill never drifts,
-and the same Skill is reusable across machines.
+plugin's repo and install state) should live in your own memory/archive area. The
+Skill's memory pointers **only give the archive's Chinese display name, never a
+specific path** — paths are maintained by your own memory index, and you can find
+the matching archive by name. Facts change only in the archive, the Skill never
+drifts, and the same Skill is reusable across machines.
 
 ## Dependencies
 
